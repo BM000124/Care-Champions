@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Complaint Form</title>
+    <link rel="stylesheet" href="complain.css">
+<body>
+
+    <h2>Submit a Complaint</h2>
+    <form action="submit_complaint.php" method="POST" enctype="multipart/form-data">
+        <label>Name (Optional):</label>
+        <input type="text" name="patient_name">
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Phone:</label>
+        <input type="text" name="phone" required>
+
+        <label>Department:</label>
+        <select name="department">
+            <option>Cardiology</option>
+            <option>Neurology</option>
+            <option>Emergency</option>
+            <option>General Surgery</option>
+        </select>
+
+        <label>Complaint Type:</label>
+        <input type="text" name="complaint_type" required>
+
+        <label>Description:</label>
+        <textarea name="description" required></textarea>
+
+        <label>Attach File (Optional):</label>
+        <input type="file" name="file_upload">
+
+        <label>Urgency Level:</label>
+        <select name="urgency">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+
+</body>
+</html>
